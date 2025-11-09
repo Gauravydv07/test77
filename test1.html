@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="pics/x-icon" href="pics\cropped-favicon-hyundaijakarta.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  font-size: large;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black; 
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: black;
+  color: white;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  height: 60px;
+  width: 70px;
+  margin-right: 10px; /* Space between logo and the "Find a car" link */
+}
+.navbar{
+  font-size: 30px;
+}
+.first{
+  font-size: 25px;
+}
+.navbar {
+            background-color:white;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .navbar a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* Slider container */
+        .slider {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        /* Images inside the slider */
+        .slides img {
+            width: 100%;
+            display: none;
+        }
+
+        /* Make sure the first image is visible */
+        .slides img.active {
+            display: block;
+        }
+
+        /* Buttons to navigate images */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+        .card-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .card {
+      width: 18%;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .card-description {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Hover Effect */
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .form-container {
+      width: 60%;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      font-size: 16px;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form-group input[type="checkbox"] {
+      width: auto;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .terms {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  
+        .column1{
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+            font-size: 23px;
+            
+        }
+        .row1:after{
+             content: "";
+             display: table;
+             clear: botH;
+        }
+     .customlink{
+      background-color: black;
+      color: white;
+     }
+</style>
+</head>
+<body>
+
+<ul class="first">
+  <li><img src="data:image/jpeg;base64,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" alt="Hyundai Logo" class="logo"></li>
+  <li><a href="#home">Find a car</a></li>
+  <li><a href="#news">Click to buy</a></li>
+  <li><a href="#contact">Connect to services</a></li>
+  <li><a href="#home">Hyundai story</a></li>
+  <li><a href="#news">Mobility solutions</a></li>
+  <li><a href="#contact">Investor Relations</a></li>
+  <li style="float:right"><a class="active" href="#about" style="color: white;">Contact us</a></li>
+</ul>
+<p><i class="glyphicon glyphicon-user" style="margin-left: 1050PX; font-size: 35px;"></i>
+      <i class="glyphicon glyphicon-envelope" style="font-size: 35px;"></i>
+  <i class="fa fa-search" style="font-size: 35px;"></i>
+  <i class="fa fa-share-alt" style="font-size: 35px;"></i>
+</p>
+<b><a href="default.asp" target="_blank" style="color: black; font-size: 25px;">Home       </a>><a href="default.asp" target="_blank" style="color: black; font-size: 25px;"> Creta Electric    </a>><a href="default.asp" target="_blank" style="color: black; font-size: 25px;">   Highlights</a></b>
+</p>
+<img src="pic\download (1).jpg" alt="ev" style="width: 350px; height: 400px;"><img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/highlights/cretaevrev1860x540_pc.jpg" alt="gdh" style="height: 400px; width:750px;"><img src="pics\evcarcreta.jpg" alt="car" style="height: 400px; width: 400px;">
+<ul class="navbar">
+  <li><a href="#home">Highlights</a></li>
+  <li><a href="#news">Exterior</a></li>
+  <li><a href="#contact">Interior</a></li>
+  <li><a href="#home">performance</a></li>
+  <li><a href="#news">Safety</a></li>
+  <li><a href="#contact">Convenience</a></li>
+  <li><a href="#about">Specification</a></li>
+  <li><a href="#">Features</a></li>
+</ul>
+<!-- Slider -->
+<div class="slider">
+  <div class="slides front">
+      <img src="data:image/jpeg;base64,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" alt="Front Image 1" class="active">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/exterior/creta-electric-front-2.jpg" alt="Front Image 2">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/exterior/creta-electric-front-3.jpg" alt="Front Image 3">
+  </div>
+  <div class="slides side" style="display: none;">
+      <img src="data:image/jpeg;base64,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" alt="Side Image 1" class="active">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/exterior/creta-electric-side2.jpg" alt="Side Image 2">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/exterior/creta-electric-side3.jpg" alt="Side Image 3">
+  </div>
+  <div class="slides rear" style="display: none;">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/exterior/creta-electric-rear-1.jpg" alt="Rear Image 1" class="active">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/exterior/creta-electric-rear-2.jpg" alt="Rear Image 2">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/exterior/creta-electric-rear-3.jpg" alt="Rear Image 3">
+  </div>
+  <div class="navbar" style="text-align: center;">
+    <a href="" onclick="changeCategory('front')">Front</a>
+    <a href="#" onclick="changeCategory('side')">Side</a>
+    <a href="#" onclick="changeCategory('rear')">Rear</a>
+  </div>
+  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  let currentCategory = 'front'; // Default category is 'front'
+
+  function changeCategory(category) {
+      // Hide all categories
+      const categories = document.querySelectorAll('.slides');
+      categories.forEach(categoryDiv => {
+          categoryDiv.style.display = 'none';
+      });
+
+      // Show selected category
+      const selectedCategory = document.querySelector(.slides.${category});
+      selectedCategory.style.display = 'block';
+
+      // Reset the slides for the new category
+      currentCategory = category;
+      currentSlide = 0;
+      updateSlider();
+  }
+
+  function changeSlide(direction) {
+      const slides = document.querySelectorAll(.slides.${currentCategory} img);
+      slides[currentSlide].classList.remove('active'); // Hide current image
+
+      currentSlide += direction;
+
+      // Loop back to the first image if we reach the end
+      if (currentSlide >= slides.length) {
+          currentSlide = 0;
+      }
+
+      // Loop back to the last image if we go below 0
+      if (currentSlide < 0) {
+          currentSlide = slides.length - 1;
+      }
+
+      updateSlider();
+  }
+
+  function updateSlider() {
+      const slides = document.querySelectorAll(.slides.${currentCategory} img);
+      slides[currentSlide].classList.add('active'); // Show next image
+  }
+
+  changeCategory('front');
+</script>
+<h3> <b style="font-size: 30px;">Undisputed. Ultimate. Now electric.</b></h3>
+<p style="font-size: 20px;">
+  One look is never enough when you are looking at the Hyundai CRETA Electric. The pixelated graphic grille, and pixelated graphic front and rear bumper give it a tech-inspired look. CRETA Electric’s road presence makes a bold statement that the ultimate Electric SUV has arrived. Attention given to the details is a part of its design philosophy. Like the R17 (D=436.6 mm) aero alloy wheels with Low Rolling Resistance (LRR) tyres, and puddle lamps with H logo projection and welcome function, that give it a distinct personality.</p>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/highlights/cretaevsmall5.jpg" alt="Card 1">
+      <div class="card-body">
+        <h5 class="card-title">Active air flaps (AAF)</h5>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/highlights/cretaevsmallpix.jpg" alt="Card 2">
+      <div class="card-body">
+        <h5 class="card-title">Pixelated graphic front grille</h5>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/highlights/cretaevsmall4.jpg" alt="Card 3">
+      <div class="card-body">
+        <h5 class="card-title">R17 (D=436.6 mm) Aero alloy wheels with Low Rolling Resistance (LRR) tyres</h5>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/highlights/cretaevsmall2.jpg" alt="Card 4">
+      <div class="card-body">
+        <h5 class="card-title">Charging port with multi-colour surround light and
+          state-of-charge (SOC) indicator</h5>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/creta-electric/highlights/exterior_creta_evsmall6.jpg" alt="Card 5">
+      <div class="card-body">
+        <h5 class="card-title">Pixelated graphic rear bumper</h5>
+      </div>
+    </div>
+  </div>
+  
+  <img src="https://autoreview.ru/images/gallery/2021/18/creta/variation_06.gif" alt="car" width="400" height="300"> <img src="https://www.bing.com/th/id/OGC.fbf713d706398f382625575c4866fa34?pid=1.7&rurl=https%3a%2f%2fmedia1.giphy.com%2fmedia%2fv1.Y2lkPTc5MGI3NjExYXZhdHptaWZ2ZDBsOWM2em1qcXphdHNzMnR1NjJlZ2dieWc0NDhlMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw%2fyFzAgJ5bTtKrMkGTaV%2fgiphy.gif&ehk=bunPySE8FLYuLlNTa0PEfTgvSVhDPBTdt0WT0CC9QU8%3d" alt="car" width="450" height="300" style="margin-left: 50px;"> <img src="https://www.bing.com/th/id/OGC.2dc19a16495da7a63166be8febf06490?pid=1.7&rurl=https%3a%2f%2fhelios-i.mashable.com%2fimagery%2farticles%2f06S9RQJJMMvIvbKUcqCy4zO%2fimages-728.gif&ehk=48jivCVclXcZuJ3swfxub93bLIaBlTDr%2bbo9DuDvm%2bo%3d" alt="car" width="550" height="400" style="margin-left: 40px;"><iframe width="550" height="360" src="https://www.youtube.com/embed/Tpec8a1JwDc" title="Electric is now CRETA." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-left: 400px;"></iframe><br><br>
+ <button style="margin-left: 550px;"><a href="https://www.hyundai.com/in/en/hyundai-story/webgl?model=CRETA_EV">Explore CRETA ELECTRIC-3D <br>configurator</a></button><br><br>
+  <div class="form-container">
+    <h2>Book Hyundai CRETA Electric Test Drive</h2>
+    <form>
+      <div class="form-group">
+        <label for="salutation">Salutation</label>
+        <select id="salutation" class="form-control">
+          <option value="Mr.">Mr.</option>
+          <option value="Ms.">Ms.</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input type="tel" id="mobile" class="form-control" placeholder="Enter your mobile number" required>
+      </div>
+      <div class="form-group">
+        <label for="otp">Enter OTP</label>
+        <input type="text" id="otp" class="form-control" placeholder="Enter OTP" required>
+      </div>
+      <div class="form-group">
+        <label for="model">Model</label>
+        <input type="text" id="model" class="form-control" value="Creta Electric" disabled>
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" class="form-control" placeholder="Enter your state" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" class="form-control" placeholder="Enter your city" required>
+      </div>
+      <div class="form-group">
+        <label for="dealer">Dealer</label>
+        <input type="text" id="dealer" class="form-control" placeholder="Enter your dealer" required>
+      </div>
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments" class="form-control" rows="4" placeholder="Enter any additional comments"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="terms">
+          <input type="checkbox" required> I accept the <a href="#">terms & conditions</a>
+        </label>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+  <div class="row1">
+    <div class="column1" style="background-color: white;"><a href="https://www.hyundai.com/in/en/click-to-buy/find-a-dealer-and-website" class="customlink">Find a Dealer</a></div>
+    <div class="column1" style="background-color: white;"><a href="https://www.hyundai.com/in/en/click-to-buy/creta-electric-request-a-test-drive?id=creta-electric&prod=creta-electric&prod=creta-electric" class="customlink">Request a Test Drive</a></div>
+    <div class="column1" style="background-color: white;"><a href="https://www.hyundai.com/in/en/click-to-buy/prices"  class="customlink">Prices</a></div>
+    <div class="column1" style="background-color: white;"><a href="https://clicktobuy.hyundai.co.in/?_gl=1*1tgolkt*_gcl_au*NDkyMTQ4NTA5LjE3NDI2MzYyOTM.*_ga*MTU5MzkxMTQzOS4xNzQyNjM2Mjkz*_ga_6WPDL2LSQZ*MTc0MzE1Njg4Ny43LjEuMTc0MzE1NjkxOC4yOS4wLjA.#/new-cars/selectacar?utm_source=Prices&utm_medium=fixed" class="customlink">Click To Buy</a></div>
+</div>
+
+</body>
+</html>
